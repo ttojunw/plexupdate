@@ -9,7 +9,7 @@
 
 #!/bin/bash
 mkdir -p /tmp/plexautoupdatetmpdir/ > /dev/null 2>&1
-token=$(cat /volume1/Plex/Library/Application\ Support/Plex\ Media\ Server/Preferences.xml | grep -oP 'PlexOnlineToken="\K[^"]+')
+token=$(cat /volume2/Plex/Library/Application\ Support/Plex\ Media\ Server/Preferences.xml | grep -oP 'PlexOnlineToken="\K[^"]+')
 url=$(echo "https://plex.tv/api/downloads/5.json?channel=plexpass&X-Plex-Token=$token")
 jq=$(curl -s ${url})
 newversion=$(echo $jq | jq -r .nas.Synology.version)
