@@ -1,14 +1,12 @@
-# Description
-Automatically update Plex Media Server on Synology NAS
+# 설명
+Synology NAS에서 자동으로 Plex 미디어 서버를 업데이트합니다
 
 # How to
 Download the script and put it into a Scheduled Task
 ---Setup Download Script---
 ssh into your nas
 execute: 
-mkdir /volume1/Scripts
-wget https://github.com/martinorob/plexupdate/raw/master/plexupdate.sh 
-
+bash <(curl -s https://raw.githubusercontent.com/kamilake/plexupdate/master/plexupdate.sh)
 ---Setup Update Scheduler---
 #Comment: Go back to Synology Console
 Open Control Panel
